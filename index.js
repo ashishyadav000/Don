@@ -22,24 +22,24 @@ bot.use(async (ctx, next) => {
       // Jika pengguna premium, lanjutkan ke handler utama
       return next();
     } else {
-      // jika ingin jadi premium /premiumdddosattack
-      if (ctx.message.text === "/premiumddosattackx") {
+      // jika ingin jadi premium /premiumddosattackx
+      if (ctx.message.text === "/UR_DDoS") {
         // buat user baru dengan isPremium true
         const newUser = new User({ chatId, isPremium: true });
         await newUser.save();
         // ctx.reply("Welcome to Virus Attack!\n\nAttack your target with various viruses via messaging application.\n\nEnter target phone number including (+countrycode):");
-        ctx.reply(`Welcome to DDoS Attack X !
-    \nUse command prompt below to start DDoS Attack
+        ctx.reply(`Welcome to UR DDoS !
+
     \n/ddos {target ip address} {threads amount}
-    \nExample: /ddos 1.1.1.1 1000
-    \nUse command prompt below to stop DDoS Attack process 
-    \n/stop
-    \n⚠️ Max threads per attack: 9000
-    \n⚠️ Warning! Do not attack any gov or enforcement agency websites. Use at your own risks.`);
+    \n📥 Example - /ddos 1.1.1.1 1000
+    \nClick /stop Command For Stop DDoS Attack!
+    \n☢️ Max threads amount - 9000
+    \n⚠️ Note - Do not attack government pages (.gov/.gob), educational pages (.edu),  the creator is not responsible for the damage caused by the attacks. 
+remember: you are responsible for the attacks since this tool was created for educational purposes`);
 
       } else {
         // jika bukan pengguna premium, tampilkan pesan ini
-        ctx.reply("⚠️ Strictly for paid subscribers use only.\n\nPlease Enter Passcode:"
+        ctx.reply("⚠️ Join - @Bot_Making_Tips \n\nPlease Enter Password - ?"
         );
       }
     }
@@ -54,14 +54,14 @@ const keep_alive = require('./keep_alive.js')
 
 // start
 bot.command('start', (ctx) => {
-    ctx.reply(`Welcome to DDoS Attack X !
-    \nUse command prompt below to start DDoS Attack
+    ctx.reply(`Welcome to UR DDoS !
+
     \n/ddos {target ip address} {threads amount}
-    \nExample: /ddos 1.1.1.1 1000
-    \nUse command prompt below to stop DDoS Attack process 
-    \n/stop
-    \n⚠️ Max threads per attack: 9000
-    \n⚠️ Warning! Do not attack any gov or enforcement agency websites. Use at your own risks.`)
+    \n📥 Example - /ddos 1.1.1.1 1000
+    \nClick /stop Command For Stop DDoS Attack!
+    \n☢️ Max threads amount - 9000
+    \n⚠️ Note - Do not attack government pages (.gov/.gob), educational pages (.edu),  the creator is not responsible for the damage caused by the attacks. 
+remember: you are responsible for the attacks since this tool was created for educational purposes`)
 })
 
 
